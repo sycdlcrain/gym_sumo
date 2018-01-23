@@ -230,8 +230,7 @@ class SumoEnv(gym.Env):
 			accel = 0
 
 		# New speed
-		self.speed0 = self.traci.vehicle.getSpeed(self.egoCarID)
-		self.speed = self.speed0 + self.dt*accel
+		self.speed = self.speed + self.dt*accel
 		
 		# Lower and upper bound for speed on straight roads and the turn
 		if self.speed < 0.0:
