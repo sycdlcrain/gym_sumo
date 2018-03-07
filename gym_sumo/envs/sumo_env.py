@@ -240,7 +240,7 @@ class SumoEnv(gym.Env):
 			# Exceeded lane speed limit
 			self.speed = self.max_speed
 		
-		self.traci.vehicle.slowDown(self.egoCarID, self.speed, int(self.dt*1000)) 
+		self.traci.vehicle.slowDown(self.egoCarID, self.speed, 0) #int(self.dt*1000)) 
 		#self.traci.vehicle.setAccel(self.egoCarID, accel) # should allow negative speeds
 		
 
